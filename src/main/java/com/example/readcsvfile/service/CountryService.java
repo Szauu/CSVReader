@@ -50,7 +50,7 @@ public class CountryService {
     public Connection connect() throws SQLException {
         final String url = "jdbc:postgresql://localhost:5432/readfromcsv";
         final String user = "postgres";
-        final String password = "postgres";
+        final String password = "Postgre1992";
         //TODO zmienić hasło i usera na własnego
 
 
@@ -93,7 +93,7 @@ public class CountryService {
     private void displayCorruption(ResultSet rs) throws SQLException {
         int j = 5;
 
-        System.out.println("5 Państw o największej korupcji");
+        System.out.println("5 Państw o najmniejszej korupcji");
 
         for (int i = 1; i <= j; i++) {
             rs.next();
@@ -104,7 +104,7 @@ public class CountryService {
     }
 
     public void getCorruption() {
-        String SQL = "SELECT region,corruption FROM country ORDER BY corruption DESC ";
+        String SQL = "SELECT region,corruption FROM country ORDER BY corruption ";
 
 
         try (Connection conn = connect();
