@@ -1,0 +1,95 @@
+5 Państw o największej wolnośći
+Qatar	0
+Uzbekistan	1
+Cambodia	2
+Norway	3
+United Arab Emirates	4
+
+
+Kraje, w których ludzie są szczęśliwsi niż w Polsce
+Venezuela	77
+Tanzania	78
+Niger	79
+Romania	80
+Kazakhstan	81
+Guinea	82
+Malta	83
+Zambia	84
+Libya	85
+Hungary	86
+Botswana	87
+Ivory Coast	88
+Kuwait	89
+Albania	90
+Uganda	91
+Ghana	92
+India	93
+Mauritania	94
+Mongolia	95
+Russia	96
+Portugal	97
+Burundi	98
+Italy	99
+Ethiopia	100
+South Korea	101
+Greece	102
+Liberia	103
+Israel	104
+Hong Kong	105
+Cameroon	106
+Spain	107
+Mozambique	108
+Iran	109
+Morocco	110
+Gabon	111
+Jordan	112
+Algeria	113
+Slovenia	114
+Burkina Faso	115
+Bosnia and Herzegovina 	116
+Bulgaria	117
+Benin	118
+Latvia	119
+Tajikistan	120
+Vietnam	121
+Croatia	122
+Togo	123
+Congo (Brazzaville)	124
+Congo (Kinshasa)	125
+Armenia	126
+South Sudan	127
+Palestinian Territories	128
+Malawi	129
+Pakistan	130
+Ukraine	131
+Central African Republic	132
+Moldova	133
+Azerbaijan	134
+Turkmenistan	135
+Chad	136
+Nepal	137
+Lithuania	138
+Sierra Leone	139
+Macedonia	140
+Georgia	141
+Haiti	142
+Montenegro	143
+Northern Cyprus	144
+Bangladesh	145
+Egypt	146
+Tunisia	147
+Serbia	148
+Belarus	149
+Lebanon	150
+Iraq	151
+Afghanistan	152
+Yemen	153
+Turkey	154
+Syria	155
+
+5 Państw o najmniejszej korupcji
+Kuwait	0
+Turkmenistan	0
+China	0
+Jordan	0
+Bahrain	0

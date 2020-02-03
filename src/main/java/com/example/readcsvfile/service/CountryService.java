@@ -43,40 +43,29 @@ public class CountryService {
         } catch (StringIndexOutOfBoundsException | IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     public Connection connect() throws SQLException {
         final String url = "jdbc:postgresql://localhost:5432/readfromcsv";
         final String user = "postgres";
-        final String password = "Postgre1992";
+        final String password = "postgres";
         //TODO zmienić hasło i usera na własnego
-
-
         return DriverManager.getConnection(url, user, password);
     }
 
-
     private void displayCountry(ResultSet rs) throws SQLException {
-
-
         int j = 5;
-
         System.out.println("5 Państw o największej wolnośći");
 
         for (int i = 1; i <= j; i++) {
             rs.next();
             System.out.println(rs.getString("region") + "\t"
                     + rs.getInt("freedom"));
-
         }
     }
 
-
     public void getFreedom() {
         String SQL = "SELECT region,freedom FROM country ORDER BY freedom";
-
 
         try (Connection conn = connect();
              Statement stmt = conn.createStatement();
@@ -88,29 +77,21 @@ public class CountryService {
         }
     }
 
-
-
     private void displayCorruption(ResultSet rs) throws SQLException {
         int j = 5;
-
         System.out.println("5 Państw o najmniejszej korupcji");
-
         for (int i = 1; i <= j; i++) {
             rs.next();
             System.out.println(rs.getString("region") + "\t"
                     + rs.getInt("corruption"));
-
         }
     }
 
     public void getCorruption() {
         String SQL = "SELECT region,corruption FROM country ORDER BY corruption ";
-
-
         try (Connection conn = connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(SQL)) {
-
             displayCorruption(rs);
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -119,22 +100,15 @@ public class CountryService {
 
 
     private void displayHappierPeopleThanPolish(ResultSet rs) throws SQLException {
-
-
         System.out.println("Kraje, w których ludzie są szczęśliwsi niż w Polsce");
-
-        while(rs.next()) {
-
+        while (rs.next()) {
             System.out.println(rs.getString("region") + "\t"
                     + rs.getInt("positive_affect"));
-
         }
     }
 
     public void getHappiness() {
         String SQL = "SELECT region, positive_affect FROM country WHERE positive_affect > ( SELECT positive_affect FROM country WHERE region LIKE '%Poland%' ) ORDER BY positive_affect";
-
-
         try (Connection conn = connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(SQL)) {
