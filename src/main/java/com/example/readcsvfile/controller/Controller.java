@@ -21,17 +21,18 @@ public class Controller {
     }
 
     @GetMapping("/freedom")
-    public void getFreedom(){
+    public void getFreedom() {
         countryService.getFreedom();
     }
 
 
     @GetMapping("/corruption")
-    public void getCorruption(){
+    public void getCorruption() {
         countryService.getCorruption();
     }
+
     @GetMapping("/happiness")
-    public void getHappierThanPoland(){
+    public void getHappierThanPoland() {
         countryService.getHappiness();
     }
 

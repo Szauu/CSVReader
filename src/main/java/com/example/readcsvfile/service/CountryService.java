@@ -29,7 +29,7 @@ public class CountryService {
                 Country c = new Country();
                 c.setRegion(data[0]);
                 c.setLadder(Integer.parseInt(data[1]));
-                c.setSdofLadder(Integer.parseInt(data[2]));
+                c.setSdOfLadder(Integer.parseInt(data[2]));
                 c.setPositiveAffect(Integer.parseInt(data[3]));
                 c.setNegativeAffect(Integer.parseInt(data[4]));
                 c.setSocialSupport(Integer.parseInt(data[5]));
@@ -49,13 +49,13 @@ public class CountryService {
         final String url = "jdbc:postgresql://localhost:5432/readfromcsv";
         final String user = "postgres";
         final String password = "postgres";
-        //TODO zmienić hasło i usera na własnego
+        //TODO change user and password for your own
         return DriverManager.getConnection(url, user, password);
     }
 
     private void displayCountry(ResultSet rs) throws SQLException {
         int j = 5;
-        System.out.println("5 Państw o największej wolnośći");
+        System.out.println("5 Countries with highest freedom");
 
         for (int i = 1; i <= j; i++) {
             rs.next();
@@ -79,7 +79,7 @@ public class CountryService {
 
     private void displayCorruption(ResultSet rs) throws SQLException {
         int j = 5;
-        System.out.println("5 Państw o najmniejszej korupcji");
+        System.out.println("5 countries with lowest corruption");
         for (int i = 1; i <= j; i++) {
             rs.next();
             System.out.println(rs.getString("region") + "\t"
@@ -100,7 +100,7 @@ public class CountryService {
 
 
     private void displayHappierPeopleThanPolish(ResultSet rs) throws SQLException {
-        System.out.println("Kraje, w których ludzie są szczęśliwsi niż w Polsce");
+        System.out.println("Countries where people are happier than in Poland");
         while (rs.next()) {
             System.out.println(rs.getString("region") + "\t"
                     + rs.getInt("positive_affect"));

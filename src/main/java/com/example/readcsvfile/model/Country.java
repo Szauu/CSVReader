@@ -3,7 +3,6 @@ package com.example.readcsvfile.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Null;
 
 
 @Entity
@@ -14,7 +13,7 @@ public class Country {
     private int Id;
     private String region;
     private int ladder;
-    private int SdofLadder;
+    private int sdOfLadder;
     private int positiveAffect;
     private int negativeAffect;
     private int socialSupport;
@@ -33,7 +32,7 @@ public class Country {
                 "Id=" + Id +
                 ", region='" + region + '\'' +
                 ", ladder=" + ladder +
-                ", SdofLadder=" + SdofLadder +
+                ", SdofLadder=" + sdOfLadder +
                 ", positiveAffect=" + positiveAffect +
                 ", negativeAffect=" + negativeAffect +
                 ", socialSupport=" + socialSupport +
@@ -69,12 +68,12 @@ public class Country {
         this.ladder = ladder;
     }
 
-    public int getSdofLadder() {
-        return SdofLadder;
+    public int getSdOfLadder() {
+        return sdOfLadder;
     }
 
-    public void setSdofLadder(int sdofLadder) {
-        SdofLadder = sdofLadder;
+    public void setSdOfLadder(int sdOfLadder) {
+        this.sdOfLadder = sdOfLadder;
     }
 
     public int getPositiveAffect() {
@@ -144,7 +143,7 @@ public class Country {
     public Country(String region, int ladder, int sdofLadder, int positiveAffect, int negativeAffect, int socialSupport, int freedom, int corruption, int generosity, int logOfGDP, int healthy) {
         this.region = region;
         this.ladder = ladder;
-        SdofLadder = sdofLadder;
+        sdOfLadder = sdofLadder;
         this.positiveAffect = positiveAffect;
         this.negativeAffect = negativeAffect;
         this.socialSupport = socialSupport;
